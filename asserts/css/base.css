@@ -1,0 +1,125 @@
+/* Font style */
+body,
+html {
+  font-family: "Nunito", sans-serif;
+}
+
+/* Responsive */
+/* PC */
+@media (min-width: 1024px) {
+  .hide-on-PC {
+    display: none;
+  }
+}
+
+/* Mobile & Tablet */
+@media (max-width: 1023px) {
+  .hide-on-mobile-tablet {
+    display: none;
+  }
+}
+
+/* Tablet - PC low resolution */
+@media (min-width: 740px) and (max-width: 1023px) {
+  .hide-on-tablet {
+    display: none;
+  }
+
+  .navbar-menu-item {
+    padding: 8px 8px;
+  }
+
+  .navbar-menu-item-icon {
+    margin-left: 4px;
+    font-size: 8px;
+  }
+
+  .navbar-menu-item-lable {
+    font-size: var(--font-size-super-small);
+  }
+}
+
+/* Mobile */
+@media (max-width: 739px) {
+  .hide-on-mobile {
+    display: none;
+  }
+
+  .header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 2;
+  }
+
+  .header__navbar-with-search {
+    height: var(--header-search-height-mobile);
+  }
+
+  .header__navbar-search-wrap {
+    position: absolute;
+    /* top: calc(0px - var(--header-search-height-mobile)); */
+    top: 100%;
+    /* height: var(--header-search-height-mobile); */
+    height: 0;
+    left: 0;
+    z-index: 1;
+    width: 100%;
+    transition: 0.3s;
+    box-sizing: border-box;
+    border: none;
+  }
+
+  .header__text-logo b {
+    font-size: var(--font-size);
+  }
+
+  .header__navbar-menu-mobile {
+    position: relative;
+  }
+
+  .header__navbar-menu-mobile-list {
+    position: absolute;
+    width: 100%;
+    height: calc(100vh - var(--header-search-height-mobile));
+    top: 100%;
+    right: -100%;
+    background-color: white;
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    color: black;
+    transition: 0.3s;
+  }
+
+  .header__navbar-menu-mobile-item {
+    padding: 30px 0;
+    font-size: var(--font-size-small);
+    text-align: center;
+  }
+
+  .slider {
+    margin-top: var(--header-search-height-mobile);
+    height: 250px;
+  }
+
+  .slider__list-item {
+  }
+
+  .slider__list-item-title {
+    top: 10%;
+    left: 15%;
+  }
+
+  .slider__list-thumb {
+    height: 40px;
+  }
+
+  .slider__list-thumb-item {
+    width: 40px;
+    height: 20px;
+    margin-right: 10px;
+  }
+}
