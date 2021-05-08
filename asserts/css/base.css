@@ -2,13 +2,29 @@
 body,
 html {
   font-family: "Nunito", sans-serif;
+  overflow-x: hidden;
 }
 
 /* Responsive */
 /* PC */
-@media (min-width: 1024px) {
+@media (min-width: 1240px) {
+  .slider {
+    /* margin-top: var(--header-search-height-mobile); */
+    height: 450px;
+  }
   .hide-on-PC {
     display: none;
+  }
+}
+
+@media (min-width: 1024px) and (max-width: 1239px) {
+  .hide-on-PC {
+    display: none;
+  }
+
+  .slider {
+    /* margin-top: var(--header-search-height-mobile); */
+    height: 350px;
   }
 }
 
@@ -16,6 +32,16 @@ html {
 @media (max-width: 1023px) {
   .hide-on-mobile-tablet {
     display: none;
+  }
+
+  .films__recomend {
+    padding: 0 10px;
+    /* box-sizing: border-box; */
+  }
+
+  .films__recomend-list-film::-webkit-scrollbar {
+    display: unset;
+    /* width: 0; */
   }
 }
 
@@ -36,6 +62,10 @@ html {
 
   .navbar-menu-item-lable {
     font-size: var(--font-size-super-small);
+  }
+
+  .slider {
+    height: 300px;
   }
 }
 
@@ -109,8 +139,12 @@ html {
   }
 
   .slider__list-item-title {
-    top: 10%;
-    left: 15%;
+    top: 5%;
+    left: 5%;
+  }
+
+  .slider__list-item-title > b {
+    font-size: var(--font-size);
   }
 
   .slider__list-thumb {

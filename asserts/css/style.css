@@ -177,7 +177,7 @@ body {
   background-position: center;
   position: relative;
 
-  transition: 1.5s;
+  transition: 1s;
 }
 
 .slider__list-item-title {
@@ -238,4 +238,260 @@ body {
 
 #slider__control-4:checked ~ .slider__list-item.slider__list-item-first {
   margin-left: -60%;
+}
+
+/* FILM */
+.films {
+  background-color: var(--primiry-color);
+  color: var(--white-color);
+  /* background-color: white; */
+}
+
+.films__recomend {
+}
+
+.films__recomend-title {
+  padding: 10px 0;
+}
+
+.films__recomend-title-tag,
+.ranking__title {
+  font-size: var(--font-size);
+  font-weight: 600;
+  text-transform: uppercase;
+}
+
+.films__recomend-title-get-all {
+  padding: 10px;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-size: var(--font-size-super-small);
+  color: var(--white-color);
+  transition: color linear 0.2s;
+  cursor: pointer;
+}
+
+.films__recomend-title-get-all:hover {
+  color: #dcf836;
+}
+
+.films__recomend-list-film {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  /* overflow: hidden; */
+  overflow-x: scroll;
+  /* overflow-y: hidden; */
+  transition: 1s;
+  margin-bottom: 20px;
+}
+
+/* .films__recomend-list-film::-webkit-scrollbar {
+  width: 0px;
+  background-color: transparent;
+} */
+/* 
+.films__recomend-list-film::-webkit-scrollbar-track {
+  background-color: red;
+} */
+
+/* .films__recomend-list-film::-webkit-scrollbar-thumb {
+  background-color: rgba(255, 255, 255, 0.9);
+  border-radius: 10px;
+} */
+
+/* Handle */
+
+.films__recomend-list-film::-webkit-scrollbar {
+  width: 8px;
+}
+
+.films__recomend-list-film::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.films__recomend-list-film::-webkit-scrollbar-thumb {
+  background-color: transparent; /* color of the scroll thumb */
+  border-radius: 20px; /* roundness of the scroll thumb */
+  border: 3px solid var(--primiry-color);
+
+  transition: 0.2s;
+}
+
+.films__recomend-list-film:hover::-webkit-scrollbar-thumb {
+  background-color: white;
+}
+
+.films__recomend-film-item {
+  /* height: 150px; */
+  min-width: 180px;
+  display: block;
+  /* background-color: white; */
+}
+
+.films__recomend-film-item:not(:last-child) {
+  margin-right: 10px;
+}
+
+.films__recomend-film-item-link {
+  text-decoration: none;
+  color: var(--white-color);
+  position: relative;
+  display: block;
+  transition: color linear 0.2s;
+}
+
+.films__recomend-film-item-link:hover {
+  color: #dcf836;
+}
+
+.film__recomend-film-item-thumbnail {
+  width: 100%;
+  height: 200px;
+  background-image: url("https://media.voocdn.com/media/image/id/5f64c48dacc39977a48b456a_300x");
+  background-size: cover;
+  background-position: center;
+}
+
+.film__recomend-film-item-tag {
+  position: absolute;
+  padding: 8px 8px;
+  top: 4px;
+  left: 4px;
+  font-size: var(--font-size-super-small);
+  background-color: rgba(0, 0, 0, 0.7);
+  border-radius: 8px;
+}
+
+.film__recommend-film-item-info {
+  padding: 10px 0px;
+}
+
+.film__recommend-film-item-info-name {
+  font-size: var(--font-size-small);
+  margin-bottom: 5px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.film__recommend-film-item-info-sub-name {
+  font-size: var(--font-size-super-small);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.ranking {
+  display: flex;
+  flex-direction: column;
+  background-color: #01060a;
+}
+
+.ranking__title {
+  padding: 12px 0;
+  margin: 0 12px;
+  line-height: 34.4px;
+}
+
+.ranking__tab {
+  margin: 0;
+  list-style: none;
+  display: flex;
+  background-color: var(--primiry-color);
+}
+
+.ranking__tab-item {
+  height: 100%;
+  font-size: var(--font-size-super-small);
+  flex: 1;
+  text-transform: uppercase;
+  box-sizing: border-box;
+  /* padding: 10px 0; */
+  height: 40px;
+  cursor: pointer;
+  border-bottom: 2px solid var(--primiry-color);
+
+  transition: 0.3s;
+}
+.ranking__tab-item:hover,
+.ranking__tab-item-active {
+  background-color: #01060a;
+  border-bottom: 2px solid red;
+}
+
+.ranking__list-item {
+  display: block;
+  margin-top: 20px;
+  width: 100%;
+  height: 140px;
+  list-style: none;
+}
+
+.ranking__list-item-link {
+  text-decoration: none;
+  color: var(--white-color);
+  position: relative;
+  display: block;
+  height: 100%;
+  width: 100%;
+}
+
+.ranking__list-item-thumb {
+  background-image: url(https://media.voocdn.com/media/image/id/603476ddacc399668b8b463d);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  height: 100%;
+  width: 100%;
+}
+
+.ranking__list-item-info {
+  width: 100%;
+
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  padding: 40px 10px 10px;
+  background: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 1));
+}
+
+.ranking__list-item-name {
+  font-size: var(--font-size-small);
+  text-transform: uppercase;
+  margin-bottom: 10px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.ranking__list-item-subname {
+  font-size: var(--font-size-super-small);
+  margin-bottom: 5px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.ranking__list-item-tag {
+  font-size: var(--font-size-super-small);
+  padding: 4px;
+  border-radius: 4px;
+  background-color: red;
+  display: inline-block;
+}
+
+.ranking__list-item-rank {
+  position: absolute;
+  box-sizing: border-box;
+  top: 0;
+  right: 0;
+  background-color: red;
+  width: 30px;
+  height: 30px;
+
+  padding-left: 12px;
+
+  line-height: 30px;
+  border-bottom-left-radius: 100%;
 }
