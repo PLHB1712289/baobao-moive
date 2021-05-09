@@ -87,6 +87,11 @@ html {
   .slider {
     height: 300px;
   }
+
+  .player-container {
+    min-height: 300px;
+    height: unset;
+  }
 }
 
 /* Mobile */
@@ -184,7 +189,12 @@ html {
     padding: 0 10px;
   }
 
-  .introduce {
+  .introduce,
+  .player {
     margin-top: var(--header-search-height-mobile);
+  }
+  .player-container {
+    min-height: 100px;
+    height: unset;
   }
 }

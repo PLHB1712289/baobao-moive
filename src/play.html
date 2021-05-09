@@ -1,0 +1,1160 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Detail Film</title>
+    <link
+      rel="shortcut icon"
+      href="/asserts/img/favicon.ico"
+      type="image/x-icon"
+    />
+    <!-- Reset css -->
+    <link rel="stylesheet" href="./asserts/css/reset.css" />
+    <!-- Grid container -->
+    <link rel="stylesheet" href="./asserts/css/grid.css" />
+    <link rel="stylesheet" href="./asserts/css/style.css" />
+    <link rel="stylesheet" href="./asserts/css/base.css" />
+    <!-- Theme icon -->
+    <link rel="stylesheet" href="./asserts/themify-icons/themify-icons.css" />
+    <!--[if lt IE 8]><!-->
+    <link rel="stylesheet" href="./asserts/themify-icons/ie7/ie7.css" />
+    <!--<![endif]-->
+
+    <!-- Font style -->
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200;0,300;0,400;0,600;0,700;0,800;0,900;1,200;1,300;1,400;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <!-- Navbar with search -->
+    <header class="header">
+      <div class="grid-container wide">
+        <div class="row">
+          <nav
+            class="header__navbar-with-search justify-content-space-between justify-content-vertical-center"
+          >
+            <!-- Search on mobile -->
+            <label for="search-on-mobile" class="hide-on-tablet hide-on-PC">
+              <span
+                class="header__navbar-icon-mobile ti-search justify-center"
+              ></span>
+            </label>
+
+            <!-- Logo -->
+            <a href="/" class="header__navbar-logo-link">
+              <span class="header__text-logo">
+                <b>PaoPao</b>
+                <span>.com</span>
+              </span>
+            </a>
+
+            <!-- Search container -->
+            <input type="checkbox" name="" id="search-on-mobile" />
+
+            <div
+              class="header__navbar-search-wrap justify-content-space-between"
+            >
+              <input
+                type="text"
+                class="header__navbar-search-input"
+                placeholder="Tìm kiếm phim"
+              />
+
+              <span
+                class="header__navbar-search-icon ti-search justify-center"
+              ></span>
+            </div>
+
+            <!-- Menu on mobile -->
+            <div class="header__navbar-menu-mobile hide-on-tablet hide-on-PC">
+              <span class="header__navbar-icon-mobile ti-menu"></span>
+            </div>
+
+            <ul
+              class="header__navbar-menu-mobile-list hide-on-tablet hide-on-PC"
+            >
+              <li class="header__navbar-menu-mobile-item">Thể Loại</li>
+
+              <li class="header__navbar-menu-mobile-item">Quốc Gia</li>
+
+              <li class="header__navbar-menu-mobile-item">Phim Bộ</li>
+            </ul>
+          </nav>
+        </div>
+      </div>
+    </header>
+
+    <!-- Navbar menu -->
+    <div class="navbar hide-on-mobile">
+      <div class="grid-container wide">
+        <div class="row">
+          <ul class="navbar-menu justify-content-left">
+            <li class="navbar-menu-item justify-content-vertical-center">
+              <span class="navbar-menu-item-lable"> Thể Loại </span>
+              <span class="navbar-menu-item-icon ti-angle-down"></span>
+
+              <div class="navbar-menu-item-has-list">
+                <div class="row">
+                  <div class="col l-3 m-3 c-3">
+                    <div class="navbar-menu-item-has-list-item justify-center">
+                      Hàn Quốc
+                    </div>
+                  </div>
+                  <div class="col l-3 m-3 c-3">
+                    <div class="navbar-menu-item-has-list-item justify-center">
+                      Trung Quốc
+                    </div>
+                  </div>
+                  <div class="col l-3 m-3 c-3">
+                    <div class="navbar-menu-item-has-list-item justify-center">
+                      Nhật Bản
+                    </div>
+                  </div>
+                  <div class="col l-3 m-3 c-3">
+                    <div class="navbar-menu-item-has-list-item justify-center">
+                      Ấn Độ
+                    </div>
+                  </div>
+                  <div class="col l-3 m-3 c-3">
+                    <div class="navbar-menu-item-has-list-item justify-center">
+                      Hoa Kỳ
+                    </div>
+                  </div>
+                  <div class="col l-3 m-3 c-3">
+                    <div class="navbar-menu-item-has-list-item justify-center">
+                      Việt Nam
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </li>
+            <li class="navbar-menu-item justify-content-vertical-center">
+              <span class="navbar-menu-item-lable"> Quốc Gia </span>
+              <span class="navbar-menu-item-icon ti-angle-down"></span>
+
+              <div class="navbar-menu-item-has-list">
+                <div class="row">
+                  <div class="col l-3 m-3 c-3">
+                    <div class="navbar-menu-item-has-list-item justify-center">
+                      Hàn Quốc
+                    </div>
+                  </div>
+                  <div class="col l-3 m-3 c-3">
+                    <div class="navbar-menu-item-has-list-item justify-center">
+                      Trung Quốc
+                    </div>
+                  </div>
+                  <div class="col l-3 m-3 c-3">
+                    <div class="navbar-menu-item-has-list-item justify-center">
+                      Nhật Bản
+                    </div>
+                  </div>
+                  <div class="col l-3 m-3 c-3">
+                    <div class="navbar-menu-item-has-list-item justify-center">
+                      Ấn Độ
+                    </div>
+                  </div>
+                  <div class="col l-3 m-3 c-3">
+                    <div class="navbar-menu-item-has-list-item justify-center">
+                      Hoa Kỳ
+                    </div>
+                  </div>
+                  <div class="col l-3 m-3 c-3">
+                    <div class="navbar-menu-item-has-list-item justify-center">
+                      Việt Nam
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </li>
+            <li class="navbar-menu-item justify-content-vertical-center">
+              <span class="navbar-menu-item-lable"> Phim Bộ </span>
+              <span class="navbar-menu-item-icon ti-angle-down"></span>
+
+              <div class="navbar-menu-item-has-list"></div>
+            </li>
+            <li class="navbar-menu-item justify-content-vertical-center">
+              <span class="navbar-menu-item-lable"> Phim Chiếu Rạp </span>
+
+              <span class="navbar-menu-item-icon ti-angle-down"></span>
+            </li>
+            <li class="navbar-menu-item justify-content-vertical-center">
+              <span class="navbar-menu-item-lable"> Phim Sắp Chiếu </span>
+
+              <span class="navbar-menu-item-icon ti-angle-down"></span>
+            </li>
+            <li class="navbar-menu-item justify-content-vertical-center">
+              <span class="navbar-menu-item-lable"> Hoạt Hinh - Anime </span>
+
+              <span class="navbar-menu-item-icon ti-angle-down"></span>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <!-- Player -->
+    <div class="player">
+      <div class="player-wrap">
+        <div class="grid-container wide">
+          <div class="row">
+            <div class="col l-10 m-12 c-12 l-o-1">
+              <div class="player-container">
+                <video
+                  class="player__video"
+                  src="/asserts/video/demo.mov"
+                  autoplay
+                ></video>
+
+                <div class="player-control">
+                  <div class="player-control__noti">
+                    <span
+                      class="player-control__noti-icon ti-control-play"
+                    ></span>
+
+                    <div class="player-control__noti-title">
+                      <span>One Piece</span>
+                      <b>Tập 984 Vietsub</b>
+                    </div>
+                  </div>
+
+                  <div class="player-control__btn-control">
+                    <div class="player-control__time justify-center">
+                      00:00 / 10:10
+                    </div>
+
+                    <div class="player-control__btn-container">
+                      <div
+                        class="player-control__btn justify-center btn-volumn"
+                      >
+                        <span class="ti-volume"></span>
+
+                        <div class="volumn__slider justify-center">
+                          <input
+                            class="volumn__slider-custom"
+                            type="range"
+                            min="1"
+                            max="100"
+                            value="50"
+                            id="myRange"
+                          />
+                        </div>
+                      </div>
+                      <div class="player-control__btn justify-center">
+                        <span class="ti-fullscreen"></span>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="player-control__progress">
+                    <div class="player-control__progress-fill"></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- List film -->
+    <div class="films">
+      <div class="grid-container wide">
+        <div class="row">
+          <div class="col l-9 m-12 c-12">
+            <div class="row">
+              <div class="col l-12 m-12 c-12">
+                <div class="films__recomend">
+                  <div
+                    class="films__recomend-title justify-content-space-between justify-content-vertical-center"
+                  >
+                    <h1 class="films__recomend-title-tag">ĐỀ CỬ CHO BẠN</h1>
+                    <a class="films__recomend-title-get-all">
+                      Xem tất cả
+                      <span class="ti-angle-right"></span>
+                    </a>
+                  </div>
+
+                  <ul class="films__recomend-list-film">
+                    <li class="films__recomend-film-item">
+                      <a class="films__recomend-film-item-link">
+                        <div class="film__recomend-film-item-thumbnail"></div>
+                        <span class="film__recomend-film-item-tag"
+                          >Full Vietsub</span
+                        >
+                        <div class="film__recommend-film-item-info">
+                          <h2 class="film__recommend-film-item-info-name">
+                            Đấu La Đại Lục
+                          </h2>
+                          <p class="film__recommend-film-item-info-sub-name">
+                            Soul Land 2018
+                          </p>
+                        </div>
+                      </a>
+                    </li>
+                    <li class="films__recomend-film-item">
+                      <a class="films__recomend-film-item-link">
+                        <span class="film__recomend-film-item-tag"
+                          >Full Vietsub</span
+                        >
+                        <div class="film__recomend-film-item-thumbnail"></div>
+
+                        <div class="film__recommend-film-item-info">
+                          <h2 class="film__recommend-film-item-info-name">
+                            Đấu La Đại Lục
+                          </h2>
+                          <p class="film__recommend-film-item-info-sub-name">
+                            Soul Land 2018
+                          </p>
+                        </div>
+                      </a>
+                    </li>
+                    <li class="films__recomend-film-item">
+                      <a class="films__recomend-film-item-link">
+                        <div class="film__recomend-film-item-thumbnail"></div>
+                        <span class="film__recomend-film-item-tag"
+                          >Full Vietsub</span
+                        >
+                        <div class="film__recommend-film-item-info">
+                          <h2 class="film__recommend-film-item-info-name">
+                            Đấu La Đại Lục
+                          </h2>
+                          <p class="film__recommend-film-item-info-sub-name">
+                            Soul Land 2018
+                          </p>
+                        </div>
+                      </a>
+                    </li>
+                    <li class="films__recomend-film-item">
+                      <a class="films__recomend-film-item-link">
+                        <div class="film__recomend-film-item-thumbnail"></div>
+                        <span class="film__recomend-film-item-tag"
+                          >Full Vietsub</span
+                        >
+                        <div class="film__recommend-film-item-info">
+                          <h2 class="film__recommend-film-item-info-name">
+                            Đấu La Đại Lục
+                          </h2>
+                          <p class="film__recommend-film-item-info-sub-name">
+                            Soul Land 2018
+                          </p>
+                        </div>
+                      </a>
+                    </li>
+                    <li class="films__recomend-film-item">
+                      <a class="films__recomend-film-item-link">
+                        <div class="film__recomend-film-item-thumbnail"></div>
+                        <span class="film__recomend-film-item-tag"
+                          >Full Vietsub</span
+                        >
+                        <div class="film__recommend-film-item-info">
+                          <h2 class="film__recommend-film-item-info-name">
+                            Đấu La Đại Lục
+                          </h2>
+                          <p class="film__recommend-film-item-info-sub-name">
+                            Soul Land 2018
+                          </p>
+                        </div>
+                      </a>
+                    </li>
+                    <li class="films__recomend-film-item">
+                      <a class="films__recomend-film-item-link">
+                        <div class="film__recomend-film-item-thumbnail"></div>
+                        <span class="film__recomend-film-item-tag"
+                          >Full Vietsub</span
+                        >
+                        <div class="film__recommend-film-item-info">
+                          <h2 class="film__recommend-film-item-info-name">
+                            Đấu La Đại Lục
+                          </h2>
+                          <p class="film__recommend-film-item-info-sub-name">
+                            Soul Land 2018
+                          </p>
+                        </div>
+                      </a>
+                    </li>
+                    <li class="films__recomend-film-item">
+                      <a class="films__recomend-film-item-link">
+                        <div class="film__recomend-film-item-thumbnail"></div>
+                        <span class="film__recomend-film-item-tag"
+                          >Full Vietsub</span
+                        >
+                        <div class="film__recommend-film-item-info">
+                          <h2 class="film__recommend-film-item-info-name">
+                            Đấu La Đại Lục
+                          </h2>
+                          <p class="film__recommend-film-item-info-sub-name">
+                            Soul Land 2018
+                          </p>
+                        </div>
+                      </a>
+                    </li>
+                    <li class="films__recomend-film-item">
+                      <a class="films__recomend-film-item-link">
+                        <div class="film__recomend-film-item-thumbnail"></div>
+                        <span class="film__recomend-film-item-tag"
+                          >Full Vietsub</span
+                        >
+                        <div class="film__recommend-film-item-info">
+                          <h2 class="film__recommend-film-item-info-name">
+                            Đấu La Đại Lục
+                          </h2>
+                          <p class="film__recommend-film-item-info-sub-name">
+                            Soul Land 2018
+                          </p>
+                        </div>
+                      </a>
+                    </li>
+                    <li class="films__recomend-film-item">
+                      <a class="films__recomend-film-item-link">
+                        <div class="film__recomend-film-item-thumbnail"></div>
+                        <span class="film__recomend-film-item-tag"
+                          >Full Vietsub</span
+                        >
+                        <div class="film__recommend-film-item-info">
+                          <h2 class="film__recommend-film-item-info-name">
+                            Đấu La Đại Lục
+                          </h2>
+                          <p class="film__recommend-film-item-info-sub-name">
+                            Soul Land 2018
+                          </p>
+                        </div>
+                      </a>
+                    </li>
+                  </ul>
+                </div>
+
+                <div class="films__recomend">
+                  <div
+                    class="films__recomend-title justify-content-space-between justify-content-vertical-center"
+                  >
+                    <h1 class="films__recomend-title-tag">ĐỀ CỬ CHO BẠN</h1>
+                    <a class="films__recomend-title-get-all">
+                      Xem tất cả
+                      <span class="ti-angle-right"></span>
+                    </a>
+                  </div>
+
+                  <ul class="films__recomend-list-film">
+                    <li class="films__recomend-film-item">
+                      <a class="films__recomend-film-item-link">
+                        <div class="film__recomend-film-item-thumbnail"></div>
+                        <span class="film__recomend-film-item-tag"
+                          >Full Vietsub</span
+                        >
+                        <div class="film__recommend-film-item-info">
+                          <h2 class="film__recommend-film-item-info-name">
+                            Đấu La Đại Lục
+                          </h2>
+                          <p class="film__recommend-film-item-info-sub-name">
+                            Soul Land 2018
+                          </p>
+                        </div>
+                      </a>
+                    </li>
+                    <li class="films__recomend-film-item">
+                      <a class="films__recomend-film-item-link">
+                        <span class="film__recomend-film-item-tag"
+                          >Full Vietsub</span
+                        >
+                        <div class="film__recomend-film-item-thumbnail"></div>
+
+                        <div class="film__recommend-film-item-info">
+                          <h2 class="film__recommend-film-item-info-name">
+                            Đấu La Đại Lục
+                          </h2>
+                          <p class="film__recommend-film-item-info-sub-name">
+                            Soul Land 2018
+                          </p>
+                        </div>
+                      </a>
+                    </li>
+                    <li class="films__recomend-film-item">
+                      <a class="films__recomend-film-item-link">
+                        <div class="film__recomend-film-item-thumbnail"></div>
+                        <span class="film__recomend-film-item-tag"
+                          >Full Vietsub</span
+                        >
+                        <div class="film__recommend-film-item-info">
+                          <h2 class="film__recommend-film-item-info-name">
+                            Đấu La Đại Lục
+                          </h2>
+                          <p class="film__recommend-film-item-info-sub-name">
+                            Soul Land 2018
+                          </p>
+                        </div>
+                      </a>
+                    </li>
+                    <li class="films__recomend-film-item">
+                      <a class="films__recomend-film-item-link">
+                        <div class="film__recomend-film-item-thumbnail"></div>
+                        <span class="film__recomend-film-item-tag"
+                          >Full Vietsub</span
+                        >
+                        <div class="film__recommend-film-item-info">
+                          <h2 class="film__recommend-film-item-info-name">
+                            Đấu La Đại Lục
+                          </h2>
+                          <p class="film__recommend-film-item-info-sub-name">
+                            Soul Land 2018
+                          </p>
+                        </div>
+                      </a>
+                    </li>
+                    <li class="films__recomend-film-item">
+                      <a class="films__recomend-film-item-link">
+                        <div class="film__recomend-film-item-thumbnail"></div>
+                        <span class="film__recomend-film-item-tag"
+                          >Full Vietsub</span
+                        >
+                        <div class="film__recommend-film-item-info">
+                          <h2 class="film__recommend-film-item-info-name">
+                            Đấu La Đại Lục
+                          </h2>
+                          <p class="film__recommend-film-item-info-sub-name">
+                            Soul Land 2018
+                          </p>
+                        </div>
+                      </a>
+                    </li>
+                    <li class="films__recomend-film-item">
+                      <a class="films__recomend-film-item-link">
+                        <div class="film__recomend-film-item-thumbnail"></div>
+                        <span class="film__recomend-film-item-tag"
+                          >Full Vietsub</span
+                        >
+                        <div class="film__recommend-film-item-info">
+                          <h2 class="film__recommend-film-item-info-name">
+                            Đấu La Đại Lục
+                          </h2>
+                          <p class="film__recommend-film-item-info-sub-name">
+                            Soul Land 2018
+                          </p>
+                        </div>
+                      </a>
+                    </li>
+                    <li class="films__recomend-film-item">
+                      <a class="films__recomend-film-item-link">
+                        <div class="film__recomend-film-item-thumbnail"></div>
+                        <span class="film__recomend-film-item-tag"
+                          >Full Vietsub</span
+                        >
+                        <div class="film__recommend-film-item-info">
+                          <h2 class="film__recommend-film-item-info-name">
+                            Đấu La Đại Lục
+                          </h2>
+                          <p class="film__recommend-film-item-info-sub-name">
+                            Soul Land 2018
+                          </p>
+                        </div>
+                      </a>
+                    </li>
+                    <li class="films__recomend-film-item">
+                      <a class="films__recomend-film-item-link">
+                        <div class="film__recomend-film-item-thumbnail"></div>
+                        <span class="film__recomend-film-item-tag"
+                          >Full Vietsub</span
+                        >
+                        <div class="film__recommend-film-item-info">
+                          <h2 class="film__recommend-film-item-info-name">
+                            Đấu La Đại Lục
+                          </h2>
+                          <p class="film__recommend-film-item-info-sub-name">
+                            Soul Land 2018
+                          </p>
+                        </div>
+                      </a>
+                    </li>
+                    <li class="films__recomend-film-item">
+                      <a class="films__recomend-film-item-link">
+                        <div class="film__recomend-film-item-thumbnail"></div>
+                        <span class="film__recomend-film-item-tag"
+                          >Full Vietsub</span
+                        >
+                        <div class="film__recommend-film-item-info">
+                          <h2 class="film__recommend-film-item-info-name">
+                            Đấu La Đại Lục
+                          </h2>
+                          <p class="film__recommend-film-item-info-sub-name">
+                            Soul Land 2018
+                          </p>
+                        </div>
+                      </a>
+                    </li>
+                  </ul>
+                </div>
+
+                <div class="films__recomend">
+                  <div
+                    class="films__recomend-title justify-content-space-between justify-content-vertical-center"
+                  >
+                    <h1 class="films__recomend-title-tag">ĐỀ CỬ CHO BẠN</h1>
+                    <a class="films__recomend-title-get-all">
+                      Xem tất cả
+                      <span class="ti-angle-right"></span>
+                    </a>
+                  </div>
+
+                  <ul class="films__recomend-list-film">
+                    <li class="films__recomend-film-item">
+                      <a class="films__recomend-film-item-link">
+                        <div class="film__recomend-film-item-thumbnail"></div>
+                        <span class="film__recomend-film-item-tag"
+                          >Full Vietsub</span
+                        >
+                        <div class="film__recommend-film-item-info">
+                          <h2 class="film__recommend-film-item-info-name">
+                            Đấu La Đại Lục
+                          </h2>
+                          <p class="film__recommend-film-item-info-sub-name">
+                            Soul Land 2018
+                          </p>
+                        </div>
+                      </a>
+                    </li>
+                    <li class="films__recomend-film-item">
+                      <a class="films__recomend-film-item-link">
+                        <span class="film__recomend-film-item-tag"
+                          >Full Vietsub</span
+                        >
+                        <div class="film__recomend-film-item-thumbnail"></div>
+
+                        <div class="film__recommend-film-item-info">
+                          <h2 class="film__recommend-film-item-info-name">
+                            Đấu La Đại Lục
+                          </h2>
+                          <p class="film__recommend-film-item-info-sub-name">
+                            Soul Land 2018
+                          </p>
+                        </div>
+                      </a>
+                    </li>
+                    <li class="films__recomend-film-item">
+                      <a class="films__recomend-film-item-link">
+                        <div class="film__recomend-film-item-thumbnail"></div>
+                        <span class="film__recomend-film-item-tag"
+                          >Full Vietsub</span
+                        >
+                        <div class="film__recommend-film-item-info">
+                          <h2 class="film__recommend-film-item-info-name">
+                            Đấu La Đại Lục
+                          </h2>
+                          <p class="film__recommend-film-item-info-sub-name">
+                            Soul Land 2018
+                          </p>
+                        </div>
+                      </a>
+                    </li>
+                    <li class="films__recomend-film-item">
+                      <a class="films__recomend-film-item-link">
+                        <div class="film__recomend-film-item-thumbnail"></div>
+                        <span class="film__recomend-film-item-tag"
+                          >Full Vietsub</span
+                        >
+                        <div class="film__recommend-film-item-info">
+                          <h2 class="film__recommend-film-item-info-name">
+                            Đấu La Đại Lục
+                          </h2>
+                          <p class="film__recommend-film-item-info-sub-name">
+                            Soul Land 2018
+                          </p>
+                        </div>
+                      </a>
+                    </li>
+                    <li class="films__recomend-film-item">
+                      <a class="films__recomend-film-item-link">
+                        <div class="film__recomend-film-item-thumbnail"></div>
+                        <span class="film__recomend-film-item-tag"
+                          >Full Vietsub</span
+                        >
+                        <div class="film__recommend-film-item-info">
+                          <h2 class="film__recommend-film-item-info-name">
+                            Đấu La Đại Lục
+                          </h2>
+                          <p class="film__recommend-film-item-info-sub-name">
+                            Soul Land 2018
+                          </p>
+                        </div>
+                      </a>
+                    </li>
+                    <li class="films__recomend-film-item">
+                      <a class="films__recomend-film-item-link">
+                        <div class="film__recomend-film-item-thumbnail"></div>
+                        <span class="film__recomend-film-item-tag"
+                          >Full Vietsub</span
+                        >
+                        <div class="film__recommend-film-item-info">
+                          <h2 class="film__recommend-film-item-info-name">
+                            Đấu La Đại Lục
+                          </h2>
+                          <p class="film__recommend-film-item-info-sub-name">
+                            Soul Land 2018
+                          </p>
+                        </div>
+                      </a>
+                    </li>
+                    <li class="films__recomend-film-item">
+                      <a class="films__recomend-film-item-link">
+                        <div class="film__recomend-film-item-thumbnail"></div>
+                        <span class="film__recomend-film-item-tag"
+                          >Full Vietsub</span
+                        >
+                        <div class="film__recommend-film-item-info">
+                          <h2 class="film__recommend-film-item-info-name">
+                            Đấu La Đại Lục
+                          </h2>
+                          <p class="film__recommend-film-item-info-sub-name">
+                            Soul Land 2018
+                          </p>
+                        </div>
+                      </a>
+                    </li>
+                    <li class="films__recomend-film-item">
+                      <a class="films__recomend-film-item-link">
+                        <div class="film__recomend-film-item-thumbnail"></div>
+                        <span class="film__recomend-film-item-tag"
+                          >Full Vietsub</span
+                        >
+                        <div class="film__recommend-film-item-info">
+                          <h2 class="film__recommend-film-item-info-name">
+                            Đấu La Đại Lục
+                          </h2>
+                          <p class="film__recommend-film-item-info-sub-name">
+                            Soul Land 2018
+                          </p>
+                        </div>
+                      </a>
+                    </li>
+                    <li class="films__recomend-film-item">
+                      <a class="films__recomend-film-item-link">
+                        <div class="film__recomend-film-item-thumbnail"></div>
+                        <span class="film__recomend-film-item-tag"
+                          >Full Vietsub</span
+                        >
+                        <div class="film__recommend-film-item-info">
+                          <h2 class="film__recommend-film-item-info-name">
+                            Đấu La Đại Lục
+                          </h2>
+                          <p class="film__recommend-film-item-info-sub-name">
+                            Soul Land 2018
+                          </p>
+                        </div>
+                      </a>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Sub tab -->
+          <div class="col l-3 m-12 c-12">
+            <div class="row">
+              <div class="col l-12 m-12 c-12">
+                <!-- Ranking -->
+                <div class="ranking">
+                  <!-- Title -->
+                  <h2 class="ranking__title">Bảng xếp hạng</h2>
+                  <ul class="ranking__tab">
+                    <li
+                      class="ranking__tab-item ranking__tab-item-active justify-center"
+                    >
+                      121 Phim Bộ
+                    </li>
+                    <li class="ranking__tab-item justify-center">40 Phim Lẻ</li>
+                    <li class="ranking__tab-item justify-center">
+                      16 Hoạt Hình
+                    </li>
+                  </ul>
+
+                  <!-- List film tab 1-->
+                  <ul class="ranking__list">
+                    <li class="ranking__list-item">
+                      <a href="" class="ranking__list-item-link">
+                        <div class="ranking__list-item-thumb"></div>
+                        <span class="ranking__list-item-rank">1</span>
+                        <div class="ranking__list-item-info">
+                          <h3 class="ranking__list-item-name">
+                            365 ngày yêu anh
+                          </h3>
+                          <p class="ranking__list-item-subname">
+                            365 Days (2020)
+                          </p>
+                          <span class="ranking__list-item-tag"
+                            >Full Thuyết Minh</span
+                          >
+                        </div>
+                      </a>
+                    </li>
+                    <li class="ranking__list-item">
+                      <a href="" class="ranking__list-item-link">
+                        <div class="ranking__list-item-thumb"></div>
+                        <span class="ranking__list-item-rank">1</span>
+                        <div class="ranking__list-item-info">
+                          <h3 class="ranking__list-item-name">
+                            365 ngày yêu anh
+                          </h3>
+                          <p class="ranking__list-item-subname">
+                            365 Days (2020)
+                          </p>
+                          <span class="ranking__list-item-tag"
+                            >Full Thuyết Minh</span
+                          >
+                        </div>
+                      </a>
+                    </li>
+                    <li class="ranking__list-item">
+                      <a href="" class="ranking__list-item-link">
+                        <div class="ranking__list-item-thumb"></div>
+                        <span class="ranking__list-item-rank">1</span>
+                        <div class="ranking__list-item-info">
+                          <h3 class="ranking__list-item-name">
+                            365 ngày yêu anh
+                          </h3>
+                          <p class="ranking__list-item-subname">
+                            365 Days (2020)
+                          </p>
+                          <span class="ranking__list-item-tag"
+                            >Full Thuyết Minh</span
+                          >
+                        </div>
+                      </a>
+                    </li>
+                    <li class="ranking__list-item">
+                      <a href="" class="ranking__list-item-link">
+                        <div class="ranking__list-item-thumb"></div>
+                        <span class="ranking__list-item-rank">1</span>
+                        <div class="ranking__list-item-info">
+                          <h3 class="ranking__list-item-name">
+                            365 ngày yêu anh
+                          </h3>
+                          <p class="ranking__list-item-subname">
+                            365 Days (2020)
+                          </p>
+                          <span class="ranking__list-item-tag"
+                            >Full Thuyết Minh</span
+                          >
+                        </div>
+                      </a>
+                    </li>
+                    <li class="ranking__list-item">
+                      <a href="" class="ranking__list-item-link">
+                        <div class="ranking__list-item-thumb"></div>
+                        <span class="ranking__list-item-rank">1</span>
+                        <div class="ranking__list-item-info">
+                          <h3 class="ranking__list-item-name">
+                            365 ngày yêu anh
+                          </h3>
+                          <p class="ranking__list-item-subname">
+                            365 Days (2020)
+                          </p>
+                          <span class="ranking__list-item-tag"
+                            >Full Thuyết Minh</span
+                          >
+                        </div>
+                      </a>
+                    </li>
+                    <li class="ranking__list-item">
+                      <a href="" class="ranking__list-item-link">
+                        <div class="ranking__list-item-thumb"></div>
+                        <span class="ranking__list-item-rank">1</span>
+                        <div class="ranking__list-item-info">
+                          <h3 class="ranking__list-item-name">
+                            365 ngày yêu anh
+                          </h3>
+                          <p class="ranking__list-item-subname">
+                            365 Days (2020)
+                          </p>
+
+                          <span class="ranking__list-item-tag"
+                            >Full Thuyết Minh</span
+                          >
+                        </div>
+                      </a>
+                    </li>
+                  </ul>
+
+                  <!-- List film tab 2-->
+                  <ul class="ranking__list">
+                    <li class="ranking__list-item">
+                      <a href="" class="ranking__list-item-link">
+                        <div class="ranking__list-item-thumb"></div>
+                        <span class="ranking__list-item-rank">1</span>
+                        <div class="ranking__list-item-info">
+                          <h3 class="ranking__list-item-name">
+                            365 ngày yêu anh
+                          </h3>
+                          <p class="ranking__list-item-subname">
+                            365 Days (2020)
+                          </p>
+                          <span class="ranking__list-item-tag"
+                            >Full Thuyết Minh</span
+                          >
+                        </div>
+                      </a>
+                    </li>
+                    <li class="ranking__list-item">
+                      <a href="" class="ranking__list-item-link">
+                        <div class="ranking__list-item-thumb"></div>
+                        <span class="ranking__list-item-rank">1</span>
+                        <div class="ranking__list-item-info">
+                          <h3 class="ranking__list-item-name">
+                            365 ngày yêu anh
+                          </h3>
+                          <p class="ranking__list-item-subname">
+                            365 Days (2020)
+                          </p>
+                          <span class="ranking__list-item-tag"
+                            >Full Thuyết Minh</span
+                          >
+                        </div>
+                      </a>
+                    </li>
+                    <li class="ranking__list-item">
+                      <a href="" class="ranking__list-item-link">
+                        <div class="ranking__list-item-thumb"></div>
+                        <span class="ranking__list-item-rank">1</span>
+                        <div class="ranking__list-item-info">
+                          <h3 class="ranking__list-item-name">
+                            365 ngày yêu anh
+                          </h3>
+                          <p class="ranking__list-item-subname">
+                            365 Days (2020)
+                          </p>
+                          <span class="ranking__list-item-tag"
+                            >Full Thuyết Minh</span
+                          >
+                        </div>
+                      </a>
+                    </li>
+                    <li class="ranking__list-item">
+                      <a href="" class="ranking__list-item-link">
+                        <div class="ranking__list-item-thumb"></div>
+                        <span class="ranking__list-item-rank">1</span>
+                        <div class="ranking__list-item-info">
+                          <h3 class="ranking__list-item-name">
+                            365 ngày yêu anh
+                          </h3>
+                          <p class="ranking__list-item-subname">
+                            365 Days (2020)
+                          </p>
+                          <span class="ranking__list-item-tag"
+                            >Full Thuyết Minh</span
+                          >
+                        </div>
+                      </a>
+                    </li>
+                    <li class="ranking__list-item">
+                      <a href="" class="ranking__list-item-link">
+                        <div class="ranking__list-item-thumb"></div>
+                        <span class="ranking__list-item-rank">1</span>
+                        <div class="ranking__list-item-info">
+                          <h3 class="ranking__list-item-name">
+                            365 ngày yêu anh
+                          </h3>
+                          <p class="ranking__list-item-subname">
+                            365 Days (2020)
+                          </p>
+                          <span class="ranking__list-item-tag"
+                            >Full Thuyết Minh</span
+                          >
+                        </div>
+                      </a>
+                    </li>
+                    <li class="ranking__list-item">
+                      <a href="" class="ranking__list-item-link">
+                        <div class="ranking__list-item-thumb"></div>
+                        <span class="ranking__list-item-rank">1</span>
+                        <div class="ranking__list-item-info">
+                          <h3 class="ranking__list-item-name">
+                            365 ngày yêu anh
+                          </h3>
+                          <p class="ranking__list-item-subname">
+                            365 Days (2020)
+                          </p>
+
+                          <span class="ranking__list-item-tag"
+                            >Full Thuyết Minh</span
+                          >
+                        </div>
+                      </a>
+                    </li>
+
+                    <li class="ranking__list-item">
+                      <a href="" class="ranking__list-item-link">
+                        <div class="ranking__list-item-thumb"></div>
+                        <span class="ranking__list-item-rank">1</span>
+                        <div class="ranking__list-item-info">
+                          <h3 class="ranking__list-item-name">
+                            365 ngày yêu anh
+                          </h3>
+                          <p class="ranking__list-item-subname">
+                            365 Days (2020)
+                          </p>
+
+                          <span class="ranking__list-item-tag"
+                            >Full Thuyết Minh</span
+                          >
+                        </div>
+                      </a>
+                    </li>
+
+                    <li class="ranking__list-item">
+                      <a href="" class="ranking__list-item-link">
+                        <div class="ranking__list-item-thumb"></div>
+                        <span class="ranking__list-item-rank">1</span>
+                        <div class="ranking__list-item-info">
+                          <h3 class="ranking__list-item-name">
+                            365 ngày yêu anh
+                          </h3>
+                          <p class="ranking__list-item-subname">
+                            365 Days (2020)
+                          </p>
+
+                          <span class="ranking__list-item-tag"
+                            >Full Thuyết Minh</span
+                          >
+                        </div>
+                      </a>
+                    </li>
+                  </ul>
+
+                  <!-- List film tab 3-->
+                  <ul class="ranking__list">
+                    <li class="ranking__list-item">
+                      <a href="" class="ranking__list-item-link">
+                        <div class="ranking__list-item-thumb"></div>
+                        <span class="ranking__list-item-rank">1</span>
+                        <div class="ranking__list-item-info">
+                          <h3 class="ranking__list-item-name">
+                            365 ngày yêu anh
+                          </h3>
+                          <p class="ranking__list-item-subname">
+                            365 Days (2020)
+                          </p>
+                          <span class="ranking__list-item-tag"
+                            >Full Thuyết Minh</span
+                          >
+                        </div>
+                      </a>
+                    </li>
+                    <li class="ranking__list-item">
+                      <a href="" class="ranking__list-item-link">
+                        <div class="ranking__list-item-thumb"></div>
+                        <span class="ranking__list-item-rank">1</span>
+                        <div class="ranking__list-item-info">
+                          <h3 class="ranking__list-item-name">
+                            365 ngày yêu anh
+                          </h3>
+                          <p class="ranking__list-item-subname">
+                            365 Days (2020)
+                          </p>
+                          <span class="ranking__list-item-tag"
+                            >Full Thuyết Minh</span
+                          >
+                        </div>
+                      </a>
+                    </li>
+                    <li class="ranking__list-item">
+                      <a href="" class="ranking__list-item-link">
+                        <div class="ranking__list-item-thumb"></div>
+                        <span class="ranking__list-item-rank">1</span>
+                        <div class="ranking__list-item-info">
+                          <h3 class="ranking__list-item-name">
+                            365 ngày yêu anh
+                          </h3>
+                          <p class="ranking__list-item-subname">
+                            365 Days (2020)
+                          </p>
+                          <span class="ranking__list-item-tag"
+                            >Full Thuyết Minh</span
+                          >
+                        </div>
+                      </a>
+                    </li>
+                    <li class="ranking__list-item">
+                      <a href="" class="ranking__list-item-link">
+                        <div class="ranking__list-item-thumb"></div>
+                        <span class="ranking__list-item-rank">1</span>
+                        <div class="ranking__list-item-info">
+                          <h3 class="ranking__list-item-name">
+                            365 ngày yêu anh
+                          </h3>
+                          <p class="ranking__list-item-subname">
+                            365 Days (2020)
+                          </p>
+                          <span class="ranking__list-item-tag"
+                            >Full Thuyết Minh</span
+                          >
+                        </div>
+                      </a>
+                    </li>
+                    <li class="ranking__list-item">
+                      <a href="" class="ranking__list-item-link">
+                        <div class="ranking__list-item-thumb"></div>
+                        <span class="ranking__list-item-rank">1</span>
+                        <div class="ranking__list-item-info">
+                          <h3 class="ranking__list-item-name">
+                            365 ngày yêu anh
+                          </h3>
+                          <p class="ranking__list-item-subname">
+                            365 Days (2020)
+                          </p>
+                          <span class="ranking__list-item-tag"
+                            >Full Thuyết Minh</span
+                          >
+                        </div>
+                      </a>
+                    </li>
+                    <li class="ranking__list-item">
+                      <a href="" class="ranking__list-item-link">
+                        <div class="ranking__list-item-thumb"></div>
+                        <span class="ranking__list-item-rank">1</span>
+                        <div class="ranking__list-item-info">
+                          <h3 class="ranking__list-item-name">
+                            365 ngày yêu anh
+                          </h3>
+                          <p class="ranking__list-item-subname">
+                            365 Days (2020)
+                          </p>
+
+                          <span class="ranking__list-item-tag"
+                            >Full Thuyết Minh</span
+                          >
+                        </div>
+                      </a>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+      <div class="grid-container wide">
+        <div class="footer-container">
+          <a href="/" class="footer-logo-link">
+            <span class="footer__text-logo">
+              <b>PaoPao</b>
+              <span>.com</span>
+            </span>
+          </a>
+
+          <p>Copyright ® 2020 PaoPao.com ver 2.0 All Rights Reserved.</p>
+          <p>paopao.com mới - xem phim hay chất lượng full hd</p>
+          <p>Liên hệ: paopao.org@gmail.com</p>
+          <p>sitemap | contact</p>
+        </div>
+      </div>
+    </footer>
+    <script src="/asserts/js/main.js"></script>
+  </body>
+</html>

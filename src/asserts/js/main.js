@@ -112,8 +112,8 @@ sliderItem.forEach((slide, index) => {
 });
 
 function updateThumbActive() {
-  sliderThumb.forEach(function (thumb, i) {
-    if (sliderControl[i].checked) {
+  sliderThumb.forEach(function (thumb, index) {
+    if (sliderControl[index].checked) {
       thumb.classList.add("slider__list-thumb-item-active");
     } else {
       thumb.classList.remove("slider__list-thumb-item-active");
@@ -251,14 +251,110 @@ if (tabDetailBodyItem.length !== 0) {
     tab.addEventListener("click", () => {
       tabDetailPageActive = index;
 
-      tabDetailPage.forEach((t, i) => {
+      tabDetailPage.forEach((t, idx) => {
         t.classList.remove("introduce__container-tab-item-lable-active");
-        tabDetailBodyItem[i].style.display = "none";
+        tabDetailBodyItem[idx].style.display = "none";
       });
 
       tabDetailPageActive = index;
       tab.classList.add("introduce__container-tab-item-lable-active");
       tabDetailBodyItem[index].style.display = "block";
     });
+  });
+}
+
+// Player control
+const playerControl = document.querySelector(".player-control");
+const toStringTime = (time) => {
+  const newTime = `0${time}`;
+  return newTime.slice(newTime.length - 2, newTime.length);
+};
+
+if (playerControl) {
+  const video = document.querySelector(".player__video");
+  const playerIcon = document.querySelector(".player-control__noti-icon");
+  const playerTime = document.querySelector(".player-control__time");
+  const playerProgress = document.querySelector(
+    ".player-control__progress-fill"
+  );
+  const playerProgressContainer = document.querySelector(
+    ".player-control__progress"
+  );
+
+  const icons = {
+    play: "ti-control-play",
+    pause: "ti-control-pause",
+  };
+  let isPlay = video.paused;
+  let isHoverProgess = false;
+  let isHoverPlayer = false;
+
+  playerControl.addEventListener("mouseover", () => {
+    playerControl.style.opacity = 1;
+    isHoverPlayer = true;
+  });
+
+  playerControl.addEventListener("mouseleave", () => {
+    isHoverPlayer = false;
+
+    setTimeout(() => {
+      playerControl.style.opacity = isPlay && !isHoverPlayer ? 0 : 1;
+    }, 2000);
+  });
+
+  playerControl.addEventListener("click", () => {
+    if (isHoverProgess) return;
+
+    isPlay = !isPlay;
+    const method = isPlay ? "play" : "pause";
+
+    playerControl.style.opacity = isPlay && !isHoverPlayer ? 0 : 1;
+    console.log({ isPlay, isHoverPlayer });
+
+    video[method]();
+  });
+
+  video.addEventListener("play", () => {
+    playerIcon.classList.remove(icons["play"]);
+    playerIcon.classList.add(icons["pause"]);
+    isPlay = true;
+  });
+  video.addEventListener("pause", () => {
+    playerIcon.classList.remove(icons["pause"]);
+    playerIcon.classList.add(icons["play"]);
+    isPlay = false;
+  });
+
+  video.addEventListener("timeupdate", (e) => {
+    const currentTime = Math.floor(video.currentTime);
+    const totalTime = Math.floor(video.duration);
+
+    // Update time title
+    playerTime.innerText = `${toStringTime(
+      ~~(currentTime / 60)
+    )}:${toStringTime(currentTime % 60)}  /  ${toStringTime(
+      ~~(totalTime / 60)
+    )}:${toStringTime(totalTime % 60)}`;
+
+    // update progress
+    playerProgress.style.width = `${
+      (currentTime / totalTime) * playerProgressContainer.clientWidth
+    }px`;
+  });
+
+  // Player progess pick time
+  playerProgressContainer.addEventListener("click", (e) => {
+    const ratio = e.offsetX / playerProgressContainer.clientWidth;
+    console.log(ratio);
+
+    video.currentTime = ratio * video.duration;
+  });
+
+  playerProgressContainer.addEventListener("mouseover", () => {
+    isHoverProgess = true;
+  });
+
+  playerProgressContainer.addEventListener("mouseleave", () => {
+    isHoverProgess = false;
   });
 }

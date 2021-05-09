@@ -716,6 +716,11 @@ body {
   background-color: #a70000;
 }
 
+.introduce__container-serie-item-link {
+  text-decoration: none;
+  color: var(--white-color);
+}
+
 .introduce__infomation {
   line-height: 30px;
   width: 100%;
@@ -727,4 +732,177 @@ body {
 .introduce__trailer {
   width: 100%;
   height: 100%;
+}
+
+/* Player */
+.player {
+  background-image: url("https://media.voocdn.com/media/image/id/5f5860fbacc3998bd98b458e");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+.player-wrap {
+  background-color: rgba(0, 0, 0, 0.92);
+  padding: 20px 0;
+}
+
+.player-container {
+  height: 600px;
+  position: relative;
+  background-color: rgba(0, 0, 0);
+}
+
+.player__video {
+  width: 100%;
+  height: 100%;
+}
+
+.player-control {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  color: var(--white-color);
+  background-color: rgba(0, 0, 0, 0.7);
+  display: flex;
+  align-items: center;
+
+  opacity: 0;
+  transition: all 0.2s;
+}
+
+.player-control:hover {
+  opacity: 1;
+}
+
+.player-control__noti {
+  width: 100%;
+  padding-left: 5%;
+  display: flex;
+  cursor: default;
+  -webkit-touch-callout: none; /* iOS Safari */
+  -webkit-user-select: none; /* Safari */
+  -khtml-user-select: none; /* Konqueror HTML */
+  -moz-user-select: none; /* Old versions of Firefox */
+  -ms-user-select: none; /* Internet Explorer/Edge */
+  user-select: none;
+}
+
+.player-control__noti-icon {
+  font-size: var(--font-size-large-super);
+}
+
+.player-control__noti-title {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding-left: 20px;
+}
+
+.player-control__noti-title > span {
+  font-size: var(--font-size-small);
+  margin-bottom: 5px;
+}
+
+.player-control__noti-title > b {
+  font-size: var(--font-size);
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+.player-control__btn-control {
+  position: absolute;
+  bottom: 10px;
+  left: 0;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  padding: 0 20px;
+  box-sizing: border-box;
+}
+
+.player-control__time {
+  cursor: default;
+  -webkit-touch-callout: none; /* iOS Safari */
+  -webkit-user-select: none; /* Safari */
+  -khtml-user-select: none; /* Konqueror HTML */
+  -moz-user-select: none; /* Old versions of Firefox */
+  -ms-user-select: none; /* Internet Explorer/Edge */
+  user-select: none;
+}
+
+.player-control__btn-container {
+  display: flex;
+}
+
+.player-control__btn {
+  /* padding: 8px 8px; */
+  width: 40px;
+  height: 40px;
+  font-size: 18px;
+  margin: 5px 5px;
+  cursor: pointer;
+  border-radius: 4px;
+  transition: all 0.2s;
+  position: relative;
+  box-sizing: border-box;
+  font-weight: 500;
+}
+
+.player-control__btn:hover {
+  color: red;
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+.volumn__slider {
+  position: absolute;
+  width: 40px;
+  bottom: 100%;
+  left: 0;
+  display: none;
+}
+
+.volumn__slider > input {
+  height: 80px;
+  width: 8px;
+  -webkit-appearance: slider-vertical;
+}
+
+.volumn__slider-custom::-webkit-slider-thumb {
+  /* -webkit-appearance: none; */
+  appearance: none;
+  width: 25px; /* Set a specific slider handle width */
+  height: 25px; /* Slider handle height */
+  background: #04aa6d; /* Green background */
+  cursor: pointer;
+}
+
+.btn-volumn:hover .volumn__slider {
+  display: flex;
+}
+
+.player-control__progress {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 6px;
+  background-color: rgba(255, 255, 255, 0.3);
+  cursor: pointer;
+  transition: height linear 0.2s;
+  z-index: 4;
+}
+
+.player-control__progress:hover {
+  height: 10px;
+}
+
+.player-control__progress-fill {
+  bottom: 0;
+  left: 0;
+  width: 0;
+  height: 100%;
+  background-color: var(--white-color);
 }
