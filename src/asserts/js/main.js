@@ -180,7 +180,6 @@ const createDefaultValue = (total, defaultValue) => {
   return arr;
 };
 const sliders = document.querySelectorAll(".films__recomend-list-film");
-console.log(sliders.length);
 
 const isDownArr = createDefaultValue(sliders.length, false);
 const startXArr = createDefaultValue(sliders.length, 0);
@@ -245,19 +244,21 @@ const tabDetailBodyItem = document.querySelectorAll(
   ".introduce__container-tab-body-item"
 );
 
-tabDetailBodyItem[0].style.display = "block";
+if (tabDetailBodyItem.length !== 0) {
+  tabDetailBodyItem[0].style.display = "block";
 
-tabDetailPage.forEach((tab, index) => {
-  tab.addEventListener("click", () => {
-    tabDetailPageActive = index;
+  tabDetailPage.forEach((tab, index) => {
+    tab.addEventListener("click", () => {
+      tabDetailPageActive = index;
 
-    tabDetailPage.forEach((t, i) => {
-      t.classList.remove("introduce__container-tab-item-lable-active");
-      tabDetailBodyItem[i].style.display = "none";
+      tabDetailPage.forEach((t, i) => {
+        t.classList.remove("introduce__container-tab-item-lable-active");
+        tabDetailBodyItem[i].style.display = "none";
+      });
+
+      tabDetailPageActive = index;
+      tab.classList.add("introduce__container-tab-item-lable-active");
+      tabDetailBodyItem[index].style.display = "block";
     });
-
-    tabDetailPageActive = index;
-    tab.classList.add("introduce__container-tab-item-lable-active");
-    tabDetailBodyItem[index].style.display = "block";
   });
-});
+}
