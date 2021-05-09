@@ -234,3 +234,30 @@ rakingItems.forEach((item, index) => {
     rankingTab[rakingTabActive].style.opacity = 1;
   });
 });
+
+// Tab in detail page
+let tabDetailPageActive = 0;
+const tabDetailPage = document.querySelectorAll(
+  ".introduce__container-tab-item-lable"
+);
+
+const tabDetailBodyItem = document.querySelectorAll(
+  ".introduce__container-tab-body-item"
+);
+
+tabDetailBodyItem[0].style.display = "block";
+
+tabDetailPage.forEach((tab, index) => {
+  tab.addEventListener("click", () => {
+    tabDetailPageActive = index;
+
+    tabDetailPage.forEach((t, i) => {
+      t.classList.remove("introduce__container-tab-item-lable-active");
+      tabDetailBodyItem[i].style.display = "none";
+    });
+
+    tabDetailPageActive = index;
+    tab.classList.add("introduce__container-tab-item-lable-active");
+    tabDetailBodyItem[index].style.display = "block";
+  });
+});

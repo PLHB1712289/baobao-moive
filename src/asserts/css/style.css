@@ -1,6 +1,7 @@
 /* HOME */
 body {
   background-image: url(../img/bg-page.jpeg);
+  position: relative;
 }
 
 :root {
@@ -30,6 +31,8 @@ body {
   width: 100%;
   color: var(--white-color);
   background-image: url(../img/bg-page.jpeg);
+  position: sticky;
+  top: 0;
 }
 
 .header__navbar-with-search {
@@ -93,6 +96,7 @@ body {
 .navbar {
   background-color: rgba(0, 0, 0, 0.8);
   color: var(--white-color);
+  position: -webkit-sticky;
 }
 
 .navbar-menu {
@@ -132,7 +136,7 @@ body {
   opacity: 0;
   transition: opacity linear 0.4s;
   display: none;
-  z-index: 1;
+  z-index: 10;
 }
 
 .navbar-menu-item:hover .navbar-menu-item-has-list {
@@ -560,4 +564,167 @@ body {
   padding: 0 20px;
   margin: 8px 0;
   text-align: center;
+}
+
+/* Detail film - Introduce film */
+.introduce {
+  overflow: hidden;
+  position: relative;
+
+  /* background-image: url(https://media.voocdn.com/media/image/id/605aa43cacc39972078b456b); */
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  min-height: 500px;
+}
+
+.introduce__background {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: 1;
+  transition: transform 0.5s;
+}
+
+.introduce__wrap {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  z-index: 2;
+  background: rgba(0, 0, 0, 0.7);
+  display: flex;
+  align-items: center;
+  padding: 40px 0;
+  box-sizing: border-box;
+}
+
+.introduce__wrap:hover ~ .introduce__background {
+  transform: scale(1.1);
+}
+
+.introduce__container-info {
+  display: flex;
+  flex-direction: column;
+  color: var(--white-color);
+  height: 100%;
+  justify-content: center;
+}
+
+.introduce__container-info > b {
+  font-size: var(--font-size-large-super);
+  margin-bottom: 20px;
+}
+
+.introduce__container-info > span {
+  font-size: var(--font-size);
+  color: rgba(255, 255, 255, 0.7);
+}
+
+.introduce__container-series {
+  color: var(--white-color);
+  display: flex;
+  flex-direction: column;
+  height: 420px;
+  justify-content: center;
+}
+
+.introduce__container-tab {
+  width: 100%;
+  height: 40px;
+  display: flex;
+}
+
+.introduce__container-tab-item-lable {
+  flex: 1;
+  text-align: center;
+  line-height: 40px;
+  box-sizing: border-box;
+  cursor: pointer;
+  transition: background linear 0.2s;
+}
+
+.introduce__container-tab-item-lable-active,
+.introduce__container-tab-item-lable:hover {
+  border-bottom: 3px solid #a70000;
+  background-color: rgba(0, 0, 0, 0.4);
+}
+
+.introduce__container-tab-body {
+  flex: 1;
+  background-color: rgba(0, 0, 0, 0.4);
+  padding: 10px;
+  overflow-y: scroll;
+  overflow-x: hidden;
+}
+
+.introduce__container-tab-body::-webkit-scrollbar {
+  width: 5px;
+}
+
+.introduce__container-tab-body::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.introduce__container-tab-body::-webkit-scrollbar-thumb {
+  background-color: transparent; /* color of the scroll thumb */
+  border-radius: 20px; /* roundness of the scroll thumb */
+
+  transition: 0.2s;
+}
+
+.introduce__container-tab-body:hover::-webkit-scrollbar-thumb {
+  background-color: rgba(255, 255, 255, 0.5);
+}
+
+.introduce__container-tab-body-item {
+  height: 100%;
+  display: none;
+}
+
+.introduce__container-serie-title {
+  padding: 10px 0;
+  font-size: var(--font-size);
+}
+
+.introduce__container-serie-container {
+  list-style: none;
+  margin: 0;
+  padding: 10px 0;
+  display: flex;
+}
+
+.introduce__container-serie-item {
+  background-color: #dd003f;
+
+  padding: 6px 12px;
+  text-align: center;
+  border-radius: 4px;
+  font-size: var(--font-size-super-small);
+  line-height: var(--font-size-super-small);
+  cursor: pointer;
+
+  margin-bottom: 10px;
+  transition: background linear 0.1s;
+}
+
+.introduce__container-serie-item:not(:first-child) {
+  margin-left: 15px;
+}
+
+.introduce__container-serie-item:hover {
+  background-color: #a70000;
+}
+
+.introduce__infomation {
+  line-height: 30px;
+  width: 100%;
+  padding: 0 20px;
+  box-sizing: border-box;
+  font-size: var(--font-size-medium-small);
+}
+
+.introduce__trailer {
+  width: 100%;
+  height: 100%;
 }

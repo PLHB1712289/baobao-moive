@@ -23,7 +23,6 @@ html {
   }
 
   .slider {
-    /* margin-top: var(--header-search-height-mobile); */
     height: 350px;
   }
 }
@@ -42,6 +41,27 @@ html {
   .films__recomend-list-film::-webkit-scrollbar {
     display: unset;
     /* width: 0; */
+  }
+
+  .introduce__wrap {
+    padding: 0 10px;
+  }
+
+  .introduce__container-info {
+    margin-bottom: 30px;
+    padding: 0;
+  }
+
+  .introduce__container-info > b {
+    font-size: var(--font-size-large);
+  }
+
+  .introduce__container-info > span {
+    font-size: var(--font-size-small);
+  }
+
+  .introduce__container-series {
+    height: 300px;
   }
 }
 
@@ -161,5 +181,9 @@ html {
   .ranking__list,
   .top__list {
     padding: 0 10px;
+  }
+
+  .introduce {
+    margin-top: var(--header-search-height-mobile);
   }
 }
