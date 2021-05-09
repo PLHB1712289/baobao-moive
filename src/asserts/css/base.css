@@ -100,7 +100,7 @@ html {
     top: 0;
     left: 0;
     right: 0;
-    z-index: 2;
+    z-index: 10;
   }
 
   .header__navbar-with-search {
@@ -142,6 +142,7 @@ html {
     list-style: none;
     color: black;
     transition: 0.3s;
+    z-index: 3;
   }
 
   .header__navbar-menu-mobile-item {
