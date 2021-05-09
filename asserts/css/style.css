@@ -46,6 +46,7 @@ body {
   font-size: var(--font-size-large);
   border: 1px solid var(--white-color);
   border-radius: 5px;
+  padding: 0 8px;
 }
 
 .header__navbar-search-wrap {
@@ -280,31 +281,16 @@ body {
   margin: 0;
   padding: 0;
   display: flex;
-  /* overflow: hidden; */
   overflow-x: scroll;
-  /* overflow-y: hidden; */
   transition: 1s;
   margin-bottom: 20px;
 }
-
-/* .films__recomend-list-film::-webkit-scrollbar {
-  width: 0px;
-  background-color: transparent;
-} */
-/* 
-.films__recomend-list-film::-webkit-scrollbar-track {
-  background-color: red;
-} */
-
-/* .films__recomend-list-film::-webkit-scrollbar-thumb {
-  background-color: rgba(255, 255, 255, 0.9);
-  border-radius: 10px;
-} */
 
 /* Handle */
 
 .films__recomend-list-film::-webkit-scrollbar {
   width: 8px;
+  transition: 1s;
 }
 
 .films__recomend-list-film::-webkit-scrollbar-track {
@@ -314,7 +300,8 @@ body {
 .films__recomend-list-film::-webkit-scrollbar-thumb {
   background-color: transparent; /* color of the scroll thumb */
   border-radius: 20px; /* roundness of the scroll thumb */
-  border: 3px solid var(--primiry-color);
+  border-top: 3.15px solid var(--primiry-color);
+  border-bottom: 3.15px solid var(--primiry-color);
 
   transition: 0.2s;
 }
@@ -420,12 +407,33 @@ body {
   border-bottom: 2px solid red;
 }
 
+.ranking__list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: none;
+  opacity: 0;
+  transition: opacity linear 1s;
+  height: 800px;
+  overflow-y: scroll;
+  overflow-x: hidden;
+  box-sizing: border-box;
+  position: relative;
+}
+/* .ranking__list: */
+
+.ranking__list::-webkit-scrollbar {
+  display: none;
+}
+
 .ranking__list-item {
   display: block;
   margin-top: 20px;
   width: 100%;
   height: 140px;
   list-style: none;
+  padding: 0;
+  position: relative;
 }
 
 .ranking__list-item-link {
@@ -448,18 +456,17 @@ body {
 
 .ranking__list-item-info {
   width: 100%;
-
   position: absolute;
   bottom: 0;
   left: 0;
-  padding: 40px 10px 10px;
+  padding: 40px 10px 5px;
   background: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 1));
 }
 
 .ranking__list-item-name {
   font-size: var(--font-size-small);
+  line-height: 22px;
   text-transform: uppercase;
-  margin-bottom: 10px;
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
@@ -467,17 +474,16 @@ body {
 
 .ranking__list-item-subname {
   font-size: var(--font-size-super-small);
-  margin-bottom: 5px;
+  margin-bottom: 10px;
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
 }
-
 .ranking__list-item-tag {
   font-size: var(--font-size-super-small);
-  padding: 4px;
+  padding: 4px 8px;
   border-radius: 4px;
-  background-color: red;
+  background-color: #ea000b;
   display: inline-block;
 }
 
@@ -486,12 +492,70 @@ body {
   box-sizing: border-box;
   top: 0;
   right: 0;
-  background-color: red;
+  background-color: grey;
   width: 30px;
   height: 30px;
-
   padding-left: 12px;
-
   line-height: 30px;
   border-bottom-left-radius: 100%;
+}
+
+.ranking__list-item:nth-child(1) .ranking__list-item-rank {
+  background: #ea000b;
+}
+
+.ranking__list-item:nth-child(2) .ranking__list-item-rank {
+  background: #ef8a0d;
+}
+
+.ranking__list-item:nth-child(3) .ranking__list-item-rank {
+  background: #f5c824;
+}
+
+/* Top film */
+.top-film .ranking__title {
+  margin-top: 20px;
+}
+
+.top__list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.top__list .ranking__list-item:first-child {
+  margin-top: 10px;
+}
+
+/* Footer */
+.footer {
+  height: 300px;
+  display: flex;
+}
+
+.footer-container {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: var(--white-color);
+}
+
+.footer-logo-link {
+  margin-bottom: 50px;
+  text-decoration: none;
+  color: var(--white-color);
+}
+
+.footer__text-logo > b {
+  border: 1px solid var(--white-color);
+  border-radius: 5px;
+  font-size: var(--font-size-large);
+  padding: 5px 10px;
+}
+
+.footer-container > p {
+  margin: 8px 0;
 }

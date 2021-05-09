@@ -60,8 +60,6 @@ const seed = [
   },
 ];
 
-console.log(seed.length);
-
 const filmsRecomend = document.querySelectorAll(".films__recomend");
 filmsRecomend.forEach((filmRecomend) => {
   const listFilmItem = filmRecomend.querySelectorAll(
@@ -84,16 +82,18 @@ filmsRecomend.forEach((filmRecomend) => {
   });
 });
 
-const rankingListItem = document.querySelectorAll(".ranking__list-item");
-rankingListItem.forEach((item, index) => {
-  item.querySelector(
-    ".ranking__list-item-thumb"
-  ).style.backgroundImage = `url(${seed[index].thumb})`;
-  item.querySelector(".ranking__list-item-rank").innerText = index + 1;
-  item.querySelector(".ranking__list-item-name").innerText = seed[index].name;
-  item.querySelector(".ranking__list-item-subname").innerText =
-    seed[index].subName;
-  item.querySelector(".ranking__list-item-tag").innerText = seed[index].tag;
+document.querySelectorAll(".ranking__list").forEach((tab) => {
+  const rankingListItem = tab.querySelectorAll(".ranking__list-item");
+  rankingListItem.forEach((item, index) => {
+    item.querySelector(
+      ".ranking__list-item-thumb"
+    ).style.backgroundImage = `url(${seed[index].thumb})`;
+    item.querySelector(".ranking__list-item-rank").innerText = index + 1;
+    item.querySelector(".ranking__list-item-name").innerText = seed[index].name;
+    item.querySelector(".ranking__list-item-subname").innerText =
+      seed[index].subName;
+    item.querySelector(".ranking__list-item-tag").innerText = seed[index].tag;
+  });
 });
 
 const sliderItem = document.querySelectorAll(".slider__list-item");
@@ -204,5 +204,33 @@ sliders.forEach((slider, index) => {
     const currX = e.pageX;
     const deltaX = currX - startXArr[index];
     slider.scrollLeft = scrollLeftArr[index] - deltaX;
+  });
+});
+
+// Ranking
+const rankingElement = document.querySelector(".ranking");
+const rakingItems = rankingElement.querySelectorAll(".ranking__tab-item");
+const rankingTab = rankingElement.querySelectorAll(".ranking__list");
+
+let rakingTabActive = 0;
+rankingTab[0].style.display = "block";
+rankingTab[0].style.opacity = 1;
+
+rakingItems.forEach((item, index) => {
+  item.addEventListener("click", () => {
+    rakingTabActive = index;
+
+    rankingTab.forEach((tab) => {
+      tab.style.display = "none";
+      tab.style.opacity = 0;
+    });
+
+    rakingItems.forEach((tab) =>
+      tab.classList.remove("ranking__tab-item-active")
+    );
+
+    item.classList.add("ranking__tab-item-active");
+    rankingTab[rakingTabActive].style.display = "block";
+    rankingTab[rakingTabActive].style.opacity = 1;
   });
 });

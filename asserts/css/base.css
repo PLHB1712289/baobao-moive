@@ -156,4 +156,10 @@ html {
     height: 20px;
     margin-right: 10px;
   }
+
+  .ranking__tab,
+  .ranking__list,
+  .top__list {
+    padding: 0 10px;
+  }
 }
